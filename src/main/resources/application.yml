@@ -1,0 +1,19 @@
+spring:
+  datasource:
+    url: jdbc:h2:mem:productsdb
+  sql:
+    init:
+      mode: always
+  jpa:
+    hibernate:
+      ddl-auto: none
+
+  application:
+    name: RedisCache
+  data:
+    redis:
+      host: localhost
+      port: 6379
+      timeout: 2000ms
+  cache:
+    type: redis
